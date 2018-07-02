@@ -6,16 +6,7 @@ namespace TOTPSharp.Lib
 {
     public class TotpHelper
     {
-        /*
-         * 
-            var key = KeyGeneration.GenerateRandomKey(OtpHashMode.Sha512);
-
-            var barcodeUrl = $"{KeyUrl.GetTotpUrl(key, user.UserName, 30, OtpHashMode.Sha512)}&issuer={ConfigurationManager.AppSettings["TokenAuthIssuer"]}";
-
-            user.TokenAuthenticatorSecret = Base32Encoding.ToString(key).Replace("=", string.Empty);
-        */
-
-        public string GenerateCode(User user)
+        public string GenerateCodeUrl(User user)
         {
 
             var key = KeyGeneration.GenerateRandomKey(OtpHashMode.Sha512);
